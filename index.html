@@ -1,153 +1,77 @@
 <!DOCTYPE html>
-<!--
-  Indica que este documento usa la versión HTML5.
--->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <!--
-    Garantiza que la página se vea bien en dispositivos móviles.
-    "width=device-width" ajusta el contenido al ancho del dispositivo.
-    "initial-scale=1.0" establece el nivel de zoom inicial.
-  -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Rochi Postres</title>
-
-  <!--
-    Conexión al archivo de estilos externo que contiene el diseño visual (CSS).
-  -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- ============================
-       BARRA DE NAVEGACIÓN (NAVBAR)
-       ============================ -->
+  <!-- ==========================
+       NAVBAR
+  ========================== -->
   <nav class="navbar">
-    <!-- Nombre del emprendimiento como logo -->
     <div class="logo">Rochi Postres</div>
-
-    <!-- Enlaces que permiten navegar dentro de la misma página -->
     <ul class="nav-links">
-  <li><a href="#inicio">Inicio</a></li>
-  <li><a href="#productos">Postres</a></li>
-  <li><a href="#pedidos">Pedidos</a></li>
-  <li><a href="#nosotros">Nosotros</a></li>
-  <li><a href="#contacto">Contacto</a></li>
-  
-</ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Postres</a></li>
+      <li><a href="#pedidos">Pedidos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
   </nav>
 
-  <!-- ============================
-       ENCABEZADO PRINCIPAL (HEADER)
-       ============================ -->
+  <!-- ==========================
+       HEADER
+  ========================== -->
   <header id="inicio">
-    <!-- Título grande de la página -->
     <h1>Rochi Postres</h1>
-
-    <!-- Subtítulo descriptivo -->
     <p>Pastelería artesanal con el sabor del hogar</p>
   </header>
 
-  <!-- =====================================
-       SECCIÓN PRINCIPAL DE LA PÁGINA (MAIN)
-       ===================================== -->
+  <!-- ==========================
+       MAIN
+  ========================== -->
   <main>
-
-    <!-- ============================
-         SECCIÓN DE PRODUCTOS
-         ============================ -->
+    <!-- SECCIÓN PRODUCTOS -->
     <section id="productos" class="productos">
       <h2>Nuestros Postres</h2>
-
-      <!-- Contenedor que organiza las tarjetas de productos -->
       <div class="card-container">
-
-        <!-- Tarjeta del Brownie -->
         <div class="card">
-          <!-- Imagen del producto -->
           <img src="img/brownie.jpg" alt="Brownie artesanal">
           <h3>Brownie artesanal</h3>
           <p>Suave por dentro, con trozos de nuez y chocolate belga.</p>
         </div>
-
-        <!-- Tarjeta de Rolls de canela -->
         <div class="card">
           <img src="img/rolls.jpg" alt="Rolls de canela">
           <h3>Rolls de canela</h3>
           <p>Suaves, esponjosos y cubiertos con glaseado casero. Un clásico irresistible.</p>
         </div>
-
-        <!-- Tarjeta del Pie de Calabaza -->
         <div class="card">
           <img src="img/piecalabaza.jpg" alt="Pie de calabaza">
           <h3>Pie de calabaza</h3>
           <p>Una deliciosa mezcla de especias y calabaza, con base de galleta crujiente.</p>
         </div>
-
       </div>
     </section>
 
-    <!-- ============================
-         SECCIÓN NOSOTROS
-         ============================ -->
-    <section id="nosotros" class="nosotros">
-      <h2>Sobre Nosotros</h2>
-
-      <!-- Texto descriptivo sobre el emprendimiento -->
-      <p>
-        En <strong>Rochi Postres</strong> creemos en el poder de los sabores hechos con amor.  
-        Cada creación está inspirada en las recetas tradicionales del hogar, elaboradas con dedicación,
-        ingredientes de calidad y ese toque dulce que nos conecta con los recuerdos más cálidos.
-      </p>
-    </section>
-
-    <!-- ============================
-         SECCIÓN CONTACTO
-         ============================ -->
-    <section id="contacto" class="contacto">
-      <h2>Contáctanos</h2>
-
-      <!-- Datos básicos de contacto -->
-      <p>📍 Bogotá, Colombia</p>
-      <p>📞 +57 300 123 4567</p>
-      <p>📧 contacto@rochipostres.com</p>
-    </section>
-  </main>
-
-        <!-- ======================================================
-         SECCIÓN DE PEDIDOS
-         Permite que los usuarios llenen un formulario para 
-         solicitar postres. Incluye nombre, producto y cantidad.
-    ======================================================= -->
+    <!-- SECCIÓN PEDIDOS -->
     <section id="pedidos" class="pedidos">
-
-      <!-- Título principal de la sección -->
       <h2>Haz tu Pedido</h2>
-
-      <!-- Texto explicativo -->
       <p class="pedido-descripcion">
         Realiza tu pedido con anticipación para asegurarte de recibir tus postres fresquitos y hechos con amor.  
         Completa el siguiente formulario y nos pondremos en contacto contigo.
       </p>
 
-      <!-- Formulario de pedidos -->
       <form class="pedido-form">
-
-        <!-- Campo: Nombre del cliente -->
         <div class="form-group">
           <label for="nombre">Tu nombre</label>
           <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
         </div>
-
-        <!-- Campo: Número de contacto -->
         <div class="form-group">
           <label for="telefono">Número de contacto</label>
           <input type="tel" id="telefono" placeholder="Ej: 300 000 0000" required>
         </div>
-
-        <!-- Campo: Selección del postre -->
         <div class="form-group">
           <label for="producto">¿Qué postre deseas?</label>
           <select id="producto" required>
@@ -157,37 +81,45 @@
             <option value="pie">Pie de calabaza</option>
           </select>
         </div>
-
-        <!-- Campo: Cantidad de unidades -->
         <div class="form-group">
           <label for="cantidad">Cantidad</label>
           <input type="number" id="cantidad" min="1" value="1" required>
         </div>
-
-        <!-- Campo: Comentarios adicionales del pedido -->
         <div class="form-group">
-          <label for="comentarios">Comentarios adicionales</label>
-          <textarea id="comentarios" rows="3" placeholder="Ej: sin nueces, extra glaseado, entrega a las 3pm"></textarea>
+          <label for="notas">Comentarios adicionales</label>
+          <textarea id="notas" rows="3" placeholder="Ej: sin nueces, extra glaseado, entrega a las 3pm"></textarea>
         </div>
 
-           <!-- Botón enviar por WhatsApp -->
-    <button type="button" class="btn-pedido" onclick="enviarPedidoWhatsApp()">
-      Enviar pedido por WhatsApp
-    </button>
-  </form>
-</section>
+        <button type="button" class="btn-pedido" onclick="enviarPedidoWhatsApp()">
+          Enviar pedido por WhatsApp
+        </button>
+      </form>
+    </section>
 
-    <!-- ============================
-       PIE DE PÁGINA (FOOTER)
-       ============================ -->
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        En <strong>Rochi Postres</strong> creemos en el poder de los sabores hechos con amor.  
+        Cada creación está inspirada en las recetas tradicionales del hogar, elaboradas con dedicación,
+        ingredientes de calidad y ese toque dulce que nos conecta con los recuerdos más cálidos.
+      </p>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="contacto">
+      <h2>Contáctanos</h2>
+      <p>📍 Bogotá, Colombia</p>
+      <p>📞 +57 323 684 7075</p>
+      <p>📧 contacto@rochipostres.com</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Rochi Postres · Hecho con amor 💛</p>
   </footer>
 
-  <!--
-    Archivo de JavaScript para funcionalidades adicionales.
-    En este caso puede estar vacío o contener interacciones básicas.
-  -->
   <script src="script.js"></script>
 </body>
 </html>
