@@ -1,0 +1,315 @@
+/* -----------------------------------------------------------
+   ESTILOS BASE
+   ----------------------------------------------------------- */
+
+/* El asterisco (*) aplica a TODOS los elementos de la página */
+* {
+  box-sizing: border-box; /* Hace que width/height incluyan padding y border → evita desbordes */
+  margin: 0;              /* Elimina márgenes por defecto */
+  padding: 0;             /* Elimina padding por defecto */
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+  font-family: 'Poppins', sans-serif; /* Fuente principal */
+  color: #4a3c32;                      /* Color principal del texto */
+  
+  /* Imagen de fondo */
+  background-image: url('img/rochipostres.jpg');
+  background-size: cover;              /* La imagen siempre cubre toda la pantalla */
+  background-position: center;         /* Centra la imagen */
+  background-attachment: fixed;        /* Fija la imagen cuando se hace scroll */
+  background-repeat: no-repeat;        /* Evita que se repita */
+
+  backdrop-filter: brightness(0.95);   /* Suaviza y oscurece ligeramente la imagen */
+  overflow-x: hidden;                  /* Evita desplazamiento horizontal inesperado */
+}
+
+
+/* -----------------------------------------------------------
+   NAVBAR (barra de navegación superior)
+   ----------------------------------------------------------- */
+
+.navbar {
+  position: fixed;                       /* Mantiene la barra siempre visible */
+  top: 0;
+  left: 0;
+  width: 100%;                           /* Ocupa todo el ancho */
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+  backdrop-filter: blur(8px);            /* Agrega efecto borroso elegante */
+
+  display: flex;                         /* Alineación horizontal */
+  justify-content: space-between;        /* Espacio entre logo y links */
+  align-items: center;                   /* Centra verticalmente */
+
+  padding: 0.8rem 2rem;                  /* Espaciado interno */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);/* Sombra suave */
+
+  z-index: 100;                          /* Se mantiene por encima de todo */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  flex-wrap: wrap;                       /* Permite que los links salten de línea en pantallas pequeñas */
+}
+
+/* Estilo alternativo cuando el usuario hace scroll */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo de la barra */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #8b5e3c;
+}
+
+/* Lista de enlaces de navegación */
+.nav-links {
+  list-style: none;           /* Elimina viñetas */
+  display: flex;
+  gap: 1.5rem;                /* Espacio entre enlaces */
+  margin-top: 0.5rem;
+  flex-wrap: wrap;            /* Permite saltar de línea */
+  justify-content: flex-end;
+}
+
+/* Estilo de los enlaces */
+.nav-links a {
+  text-decoration: none;      /* Quita subrayado */
+  color: #4a3c32;
+  font-weight: 500;
+  transition: color 0.3s;     /* Suaviza el cambio de color */
+}
+
+.nav-links a:hover {
+  color: #8b5e3c;             /* Color al pasar el mouse */
+}
+
+
+/* -----------------------------------------------------------
+   HEADER (sección inicial)
+   ----------------------------------------------------------- */
+
+header {
+  text-align: center;
+  padding: 6rem 1rem 4rem;           /* Espaciado interno */
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);        /* Fondo borroso elegante */
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #8b5e3c;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+
+/* -----------------------------------------------------------
+   SECCIÓN PRODUCTOS
+   ----------------------------------------------------------- */
+
+.productos {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.productos h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #6a4b36;
+}
+
+/* Contenedor de las tarjetas de productos */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;          /* Permite que las tarjetas se acomoden en varias filas */
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Tarjeta individual */
+.card {
+  background-color: #fffaf5;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 280px;          /* Ancho máximo */
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Imagen dentro de cada tarjeta */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;         /* Mantiene proporción recortando */
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0.8rem;
+  color: #8b5e3c;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+
+/* -----------------------------------------------------------
+   SECCIÓN NOSOTROS
+   ----------------------------------------------------------- */
+
+.nosotros {
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.nosotros h2 {
+  color: #6a4b36;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.nosotros p {
+  max-width: 700px;       /* Limita ancho de lectura */
+  margin: auto;
+  font-size: 1.05rem;
+  line-height: 1.6;       /* Mejora legibilidad */
+}
+
+
+/* -----------------------------------------------------------
+   SECCIÓN CONTACTO
+   ----------------------------------------------------------- */
+
+.contacto {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: rgba(255, 250, 245, 0.9);
+}
+
+.contacto h2 {
+  color: #6a4b36;
+  margin-bottom: 1rem;
+}
+
+
+/* -----------------------------------------------------------
+   FOOTER
+   ----------------------------------------------------------- */
+
+footer {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+
+/* -----------------------------------------------------------
+   RESPONSIVE (pantallas pequeñas)
+   ----------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;   /* Tarjetas una debajo de la otra */
+    align-items: center;
+  }
+  
+  .nav-links {
+    justify-content: center;  /* Centraliza los enlaces */
+    gap: 1rem;
+  }
+}
+
+/* ==============================================================
+   SECCIÓN DE PEDIDOS
+   Contiene estilos para el formulario donde el usuario hace un pedido
+================================================================ */
+
+/* Contenedor general de la sección */
+.pedidos {
+  padding: 3rem 1.5rem; /* Espaciado interno */
+  background-color: rgba(255, 255, 255, 0.92); /* Fondo claro */
+  text-align: center; /* Centra el texto */
+}
+
+/* Título principal */
+.pedidos h2 {
+  font-size: 2rem;
+  color: #6a4b36;
+  margin-bottom: 1rem;
+}
+
+/* Texto debajo del título */
+.pedido-descripcion {
+  max-width: 600px;
+  margin: 0 auto 2rem; /* Centrado + separación */
+  font-size: 1.05rem;
+}
+
+/* Estilo general del formulario */
+.pedido-form {
+  max-width: 600px; /* Ancho máximo */
+  margin: auto; /* Centrado */
+  display: flex;
+  flex-direction: column; /* Elementos uno debajo del otro */
+  gap: 1.2rem; /* Separación entre campos */
+}
+
+/* Contenedor por cada campo */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Alinea el texto del label */
+}
+
+/* Estilo de los textos de los labels */
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #6a4b36;
+}
+
+/* Estilos compartidos para input, select y textarea */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #d7c8bc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fffaf5; /* Fondo suave */
+}
+
+/* Botón enviar */
+.btn-pedido {
+  padding: 0.9rem;
+  background-color: #8b5e3c; /* Color café */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover del botón */
+.btn-pedido:hover {
+  background-color: #6a4b36;
+}
