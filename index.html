@@ -35,6 +35,7 @@
   <li><a href="#pedidos">Pedidos</a></li>
   <li><a href="#nosotros">Nosotros</a></li>
   <li><a href="#contacto">Contacto</a></li>
+  
 </ul>
   </nav>
 
@@ -169,11 +170,12 @@
           <textarea id="comentarios" rows="3" placeholder="Ej: sin nueces, extra glaseado, entrega a las 3pm"></textarea>
         </div>
 
-        <!-- Botón para enviar formulario -->
-        <button type="submit" class="btn-pedido">Enviar Pedido</button>
-
-      </form>
-    </section>
+           <!-- Botón enviar por WhatsApp -->
+    <button type="button" class="btn-pedido" onclick="enviarPedidoWhatsApp()">
+      Enviar pedido por WhatsApp
+    </button>
+  </form>
+</section>
 
     <!-- ============================
        PIE DE PÁGINA (FOOTER)
