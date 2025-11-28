@@ -73,3 +73,25 @@ if (pedidoForm) {
     pedidoForm.reset();
   });
 }
+
+function enviarPedidoWhatsApp() {
+  const nombre = document.getElementById("nombre").value;
+  const telefono = document.getElementById("telefono").value;
+  const producto = document.getElementById("producto").value;
+  const cantidad = document.getElementById("cantidad").value;
+  const notas = document.getElementById("notas").value;
+
+  const numeroNegocio = "573236847075"; // ← aquí pones el número real con código de país sin signos  
+
+  const mensaje = 
+    `¡Hola! Quiero hacer un pedido:%0A%0A` +
+    `*Nombre:* ${nombre}%0A` +
+    `*Teléfono:* ${telefono}%0A` +
+    `*Producto:* ${producto}%0A` +
+    `*Cantidad:* ${cantidad}%0A` +
+    `*Notas:* ${notas}%0A%0A` +
+    `Enviado desde la página de Rochi Postres 🍰`;
+
+  const url = `https://wa.me/${numeroNegocio}?text=${mensaje}`;
+  window.open(url, "_blank");
+}
